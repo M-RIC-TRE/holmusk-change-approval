@@ -34,7 +34,7 @@ body:
   - type: checkboxes
     id: urgency
     attributes:
-      label: How quickly does this change need approving?
+      label: How quickly does this change need approval?
       options:
         - label: Critical Update
         - label: Urgent
