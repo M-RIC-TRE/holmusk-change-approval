@@ -1,0 +1,42 @@
+name: Change Control Approval
+description: Request a change approval to an infrastructure.
+labels: ["change request"]
+# projects: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please complete the following form to raise a change approval. You are required to fill out this form whenever substantial changes in Azure infrastructure are requested on your side.
+  - type: input
+    id: user-name
+    attributes:
+      label: User Name
+      description: Please enter your full name
+      placeholder: Name
+    validations:
+      required: true
+  - type: input
+    id: user-email
+    attributes:
+      label: User Email
+      description: Please enter you email address
+      placeholder: e.g. email@example.com
+    validations:
+      required: true
+  - type: textarea
+    id: change-details
+    attributes:
+      label: Change Details
+      description: Please describe the changes that are required to approve.
+      placeholder: What exactly do you want to change or implement? Be aware that only substantial changes need to be approved.
+    validations:
+      required: true
+  - type: checkboxes
+    id: urgency
+    attributes:
+      label: How quickly does this change need approving?
+      options:
+        - label: Critical Update
+        - label: Urgent
+        - label: Normal Priority
+        - label: Low Priority
